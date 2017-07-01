@@ -1,0 +1,95 @@
+<!--
+<div class="container">
+  <div class="starter-template">
+    <p class="lead">Ttt</p>
+  </div>
+</div>
+
+-->
+
+
+<div class="container eventContainer">
+  <div class="eventHeader row">
+    <div class="col-md-3">
+          <div class="box fontDomino">
+              {{event.details}}
+          </div>
+    </div>
+    <div class="col-md-3" >
+          <div class="box fontDomino">
+              Club: {{event.club_name}}
+          </div>
+    </div>  
+    <div class="col-md-3">
+          <div class="box fontDomino">
+              Status: {{event.status}}
+          </div>
+    </div>                      
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+          <div class="box">
+              Created by: {{event.owner.name}}
+          </div>
+    </div>
+    <div class="col-md-3">
+          <div class="box">
+              Start Date: {{event.date_started}}
+          </div>
+    </div>
+    <div class="col-md-3">
+          <div class="box">
+              End Date: {{event.date_ended}}
+          </div>
+    </div>                          
+  </div>
+
+  <div class="row">
+    <div class="col-md-0">
+      <div class="box eventMemberBox">
+          JOINERS:
+          <span *ngFor="let m of event.members; let i=index">
+            {{m.email}}<span *ngIf="(i+1<event.members.length)">, </span>
+          </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-5">
+          <div class="box">
+              <button (click)="startTrip()" [disabled]="isDisableStartBtn()" class="btn btn-primary">{{startBtnLabel}}</button>
+              <button (click)="endTrip()" [disabled]="isDisableEndBtn()" class="btn btn-primary">End Trip</button>
+              <button (click)="emergency()" [disabled]="isDisableEmergencyBtn()" class="btn btn-primary">Emergency</button>
+              <button (click)="join()" [disabled]="isDisableJoinBtn()" class="btn btn-primary">Join</button>
+          </div>
+    </div>                       
+  </div>
+
+
+  <div *ngIf="event.status=='started' || event.status=='emergency' " class="row">
+    <hr>
+    <div class="col-md-3">
+      <div class="box">
+
+
+          <sebm-google-map [zoom]="16" [latitude]="event.current_location.coordinates[1]" [longitude]="event.current_location.coordinates[0]">
+            <sebm-google-map-marker [latitude]="event.current_location.coordinates[1]" 
+              [longitude]="event.current_location.coordinates[0]">
+            </sebm-google-map-marker>
+          </sebm-google-map>
+        
+
+      </div>
+    </div>
+
+    <div class="col-md-2"></div>
+    <div class="col-md-3">
+       
+        <button (click)="simulate()" class="btn btn-secondary">Simulate</button>
+       
+    </div>
+
+  </div>
+
+</div>

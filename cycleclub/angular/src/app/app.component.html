@@ -1,0 +1,10 @@
+<div class="container">
+    <h1 class="fontRocket">The Cyclers Club System</h1>
+    <div *ngIf="emergencyMsgs">
+        <div *ngFor="let e of emergencyMsgs" class="emergencyContainer fontDomino">
+                        <!--{{e.text}}-->
+                        {{e.event.txt}}
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>

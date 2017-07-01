@@ -1,0 +1,11 @@
+{
+	name:"Pedro",
+	email:"er@er.com",
+	location:{
+		lat:-45,
+		lon:45	
+	}
+	
+	image: "photo.jpg",
+	user_id: 3444
+}

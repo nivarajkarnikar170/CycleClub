@@ -1,0 +1,35 @@
+{	
+	"name": "Fight Club",
+	"location":{"lat":-45,"lon":45},
+	"state": "IA",
+	"city": "Fairfield",
+	"image": "club.jpg",
+	"users":[
+		{	
+			"name":"Pedro",
+			"email":"er@er.com",	
+			"image": "photo.jpg",
+			"user_id": 3444
+
+		}
+	],
+	"events":[{ 
+		"id": 1,
+		"name": "Trip to Jerusalem",
+		"status": "not started",
+		"owner":{
+			"name":"Pedro",
+			"email":"er@er.com"
+		}
+	}],
+	"announcements":[{
+		"id": 1,
+		"details": "anouncements blah blah blah",
+		"createdBy":{
+			"name":"Pedro",
+			"email": "er@er.com"
+		}
+		}
+	]
+	
+}

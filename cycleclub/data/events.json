@@ -1,0 +1,28 @@
+{	
+	"details":"Trip to Jerusalem",
+	"status": "not started",
+	"start_date": "03/21/2017",
+	"end_date": "03/21/2017",
+	"start_location":{
+		"lat": -45,
+		"lon": 54
+	},
+	"end_location":{
+		"lat": -45,
+		"lon": 54
+	},
+	"accident_location":{
+		"lat": -45,
+		"lon": 54
+	},
+	"members":[{
+		"name":"Maria",
+		"email":"ser@er.com",
+		"user_id":339
+	}],
+	"owner":{	
+		"name":"Pedro",
+		"email":"er@er.com",
+		"user_id": 3444
+	}
+}

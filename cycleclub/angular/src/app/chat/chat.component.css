@@ -1,0 +1,15 @@
+.chat-main-box{
+    position: relative;
+    overflow: auto;
+    border: solid 1px grey;
+}
+
+.msg-box{
+
+    height: 500px; 
+    overflow: auto; 
+}
+
+.input-msg{
+    width:318px;
+}

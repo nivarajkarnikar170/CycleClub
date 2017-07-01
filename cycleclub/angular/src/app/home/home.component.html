@@ -1,0 +1,24 @@
+<div>
+    <div class="home jumbotron centered">
+        <h3>Welcome {{name}}..</h3>
+        <div>
+            <nav>
+                <a [routerLink]="['']">Home</a>
+                <a [routerLink]="['clubs']" [queryParams]="{long:long,lat:lat}">Clubs near me</a>
+                <!--<a [routerLink]="['events']">Events</a>-->
+                <button class="tablinks" (click)="listEvents('none')">Events</button>
+                <button class="tablinks" (click)="listEvents('live')">Live Events</button>
+                <button (click)="logout()">Logout</button>
+            </nav>
+        </div>
+        <div>
+            <sebm-google-map [latitude]="lat" [longitude]="long" [zoom]=13>
+                <sebm-google-map-marker [latitude]="lat" [longitude]="long"></sebm-google-map-marker>
+                <sebm-google-map-marker [latitude]="newLat" [longitude]="newLong"></sebm-google-map-marker>
+            </sebm-google-map>
+        </div>
+        
+    </div>
+</div>
+
+<router-outlet></router-outlet>

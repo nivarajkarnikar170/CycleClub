@@ -1,0 +1,89 @@
+<div *ngIf="clubDetails">
+  <div class="jumbotron club-title">
+    <a [routerLink]="['']">Home</a>
+    <h2>{{clubDetails.name}}, {{clubDetails.state}}, {{clubDetails.city}} </h2>  <span class="pull-right">Welcome {{userName}}! <button (click)="logout()">Logout</button></span>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      
+      <button class="btn btn-primary" (click)="onAddEvent(clubDetails._id)">Add Event</button>
+      <button class="btn btn-primary" (click)="onAddAnnouncement(clubDetails._id)">Add Announcement</button>
+    </div>
+    <br>
+    <div *ngIf="addEvent">
+      <app-addevent [cid]="clubDetails._id" [clubDetails]="clubDetails" (eventAdded)="eventAdded($event)"></app-addevent>
+    </div>
+
+    <div *ngIf="addAnnouncement">
+      <app-addanouncement [cid]="clubDetails._id" (announcementAdded)="announcementAdded($event)"> </app-addanouncement>
+    </div>
+    <br>
+    <br>
+    <div class="col-sm-8">
+      <h3>Club Members:</h3>
+       <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Member Name</th>
+        <th>Email</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let subItem of clubDetails.users">
+        <td>{{subItem.name}}</td>
+        <td>{{subItem.email}}</td>
+        <td><button class="btn btn-primary btn-xs pull-right" name="chatBtn"
+                (click)="onChatStart(subItem.email)">chat</button>
+              <span><a [routerLink]="['/profile', subItem.user_id]"> View Profile </a></span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Club Events:</h3>
+
+  <!--<div *ngFor="let e of clubDetails.events">
+  <app-event-detail [user]="user" [event]="e" [isOwner]="isOwner(e.owner.email)" ></app-event-detail>
+  </div>-->
+       <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Event Name</th>
+        <th>Event Status</th>
+        <th>Event Owner</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let subItem of clubDetails.events">
+        <td>{{subItem.name}}</td>
+        <td>{{subItem.status}}</td>
+        <td>{{subItem.owner.name}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+   <h3>Club Announcements:</h3>
+       <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Announcement Details</th>
+        <th>Created By</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let subItem of clubDetails.announcements">
+        <td>{{subItem.details}}</td>
+        <td> {{subItem.createdBy.name}}</td>
+        <td>{{subItem.createdBy.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+    </div>
+    <div class="col-sm-4">
+      <chat [messages]="child_message" senderEmail="{{user_email}}" clearMessage="{{clearMessage}}" receiverEmail="{{receiver_email}}" displayReceiverEmail="{{displayReceiverEmail}}"></chat>
+    </div>
+  </div>
+</div>

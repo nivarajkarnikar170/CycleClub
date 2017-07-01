@@ -1,0 +1,4 @@
+
+<div *ngFor="let e of events">
+  <app-event-detail [user]="user" [event]="e" [isOwner]="isOwner(e.owner.email)" ></app-event-detail>
+</div>

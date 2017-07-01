@@ -1,0 +1,24 @@
+.sebm-google-map-container {
+    height: 300px;
+}
+
+.tablinks {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+button.tablinks:hover {
+    background-color: #ddd;
+}
+
+button.tablinks.active {
+    background-color: #ccc;
+}
+
+sebm-google-map {
+    width: 100%;
+}

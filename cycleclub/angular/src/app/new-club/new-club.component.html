@@ -1,0 +1,17 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <label>Name of club: </label>
+    <input type="text" name="name" [formControl]="name"><br>
+    <div *ngIf="!myForm.controls['name'].valid" class="error">Required</div><br>
+    <label>Photo link: </label>
+    <input type="text" name="image" [formControl]="image"><br>
+    <div *ngIf="!myForm.controls['image'].valid" class="error">Required</div><br>
+    <button type="submit" [disabled]="!myForm.valid">Create</button>
+</form>
+
+<!--<form>
+    <div>
+        <label>Name of club: </label><input type="text"><br>
+        <div *ngIf="!name.valid">Required</div>
+        <input type="submit">
+    </div>
+</form>-->

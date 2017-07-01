@@ -1,0 +1,14 @@
+<div class="form-group">
+
+  <form (ngSubmit)="onCreateEvent(f)" #f="ngForm">
+    <input type="text" name="eventName" [(ngModel)]="event.eventName" (keyup)="onInputInsert()" placeholder="Event Name" #eventName="ngModel"
+      required minlength="4" />
+    <!--<div *ngIf="!eventName.valid">Required!! </div>-->
+
+    <button class="btn btn-primary btn-xs" [disabled]="!f.valid" type="submit">Submit</button>
+  </form>
+  <br>
+
+  <p class="green" *ngIf="eventAddedFlag"> Event Added!! </p>
+
+</div>

@@ -1,0 +1,19 @@
+
+
+
+<div class="panel panel-primary">
+      <div class="panel-heading"><h5> Send message to: {{displayReceiverEmail}}</h5></div>
+      <div class="panel-body">
+            <div>
+              <div class="msg-box">
+                <p *ngFor="let message of messages">
+                  {{message.sender}} : {{message.message}}
+                </p>
+                </div>
+                <div class="inputs">
+                  <input class="input-msg" placeholder="Enter Message" a [(ngModel)]="message" />
+                  <button class="btn-block" (click)="sendMessage()">Send</button>
+                </div>              
+            </div>
+    </div>
+  </div>

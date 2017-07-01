@@ -1,0 +1,23 @@
+<div class="panel panel-primary" *ngIf="displayDetails">
+  <div class="panel-heading">Club Member Profile</div>
+
+  <div class="panel-body">
+    <div class="col-md-6">
+      <img src="{{displayDetails.image}}" alt="Smiley face" height="180" width="180">
+      <br><br>
+      <p> <b>Username:</b> {{displayDetails.name}}</p>
+      <p> <b>Email:</b> {{displayDetails.email}}</p>
+      <a [routerLink]="['/club/detail/', courseId]"> Go Back</a>
+    </div>
+
+
+    <div class="col-md-4">
+      Location in Map
+      <div class="box">
+        <sebm-google-map [zoom]="16" [latitude]="displayDetails.location.coordinates[0]" [longitude]="displayDetails.location.coordinates[1]">
+          <sebm-google-map-marker [latitude]="displayDetails.location.coordinates[0]" [longitude]="displayDetails.location.coordinates[1]">
+          </sebm-google-map-marker>
+        </sebm-google-map>
+
+      </div>
+    </div>

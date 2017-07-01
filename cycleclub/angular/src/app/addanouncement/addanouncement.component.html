@@ -1,0 +1,11 @@
+<div class="form-group">
+  <form (ngSubmit)="onCreateAnnouncement(f)" #f="ngForm">
+    <input type="text" required minlength="4" name="announcementDetail" (keyup)="onInputInsert()" [(ngModel)]="announcement.announcementDetail"
+      placeholder="Announcement Details" #AnnouncementDetails="ngModel" />
+    <!--<div *ngIf="!eventName.valid">Required!! </div>-->
+    <button class="btn btn-primary btn-xs" [disabled]="!f.valid" type="submit">Submit</button>
+  </form>
+  <br>
+
+  <p class="green" *ngIf="announcementAddedFlag"> Announcement Added!! </p>
+</div>

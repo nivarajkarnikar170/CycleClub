@@ -1,0 +1,101 @@
+/* You can add global styles to this file, and also import other style files */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  padding-top: 5rem;
+  margin-bottom: 60px;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.eventHeader{
+  background-color:#337ab7;
+  color: white;
+  border-radius: 5px,5px;
+  font-size: 15px;
+}
+.eventContainer {
+    border: thin solid lightskyblue;
+    border-radius: 5px;
+    padding-bottom: 5px;
+    margin: 10px;
+}
+
+.emergencyContainer{
+    background-color: #337ab7;
+    font-size: 25px;
+    padding:5px;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    border: thin solid lightskyblue;
+    animation-name: animate;
+    animation-duration: 2s;
+    animation-iteration-count:100;
+    margin-bottom:5px; 
+}
+
+@keyframes animate {
+    from {background-color: lightcoral;}
+    to {background-color: #337ab7;}
+}
+
+.eventMemberBox {
+  background-color: lavender;
+  border-radius: 5px;
+  padding: 5px;
+  color: lightslategrey;
+  margin:5px;
+}
+
+.sebm-google-map-container {
+  height: 300px;
+  width: 450px;
+}
+
+@font-face{
+  font-family: 'KoolBeans';
+  src: url('/assets/fonts/SheepingDogs.ttf');
+}
+
+@font-face{
+  font-family: 'RiderChrome';
+  src: url('/assets/fonts/riderChrome.ttf');
+}
+
+@font-face{
+  font-family: 'RocketPop';
+  src: url('/assets/fonts/rocketPop.ttf');
+}
+
+@font-face{
+  font-family: 'Domino';
+  src: url('/assets/fonts/domino.ttf');
+}
+
+.fontRider{
+  font-family:'RiderChrome';
+  color:lightsalmon;
+}
+
+.fontKool{
+  font-family:'KoolBeans';
+}
+
+.fontRocket{
+  font-family:'RocketPop';
+}
+
+.fontDomino{
+  font-family:'Domino';
+  font-size:15pt;
+}
+
+
+
+[hidden] { display: none !important;}

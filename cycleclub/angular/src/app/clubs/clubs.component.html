@@ -1,0 +1,43 @@
+<div *ngIf="clubs?.length<=0">
+    There are no clubs near by you !<br>
+    <button (click)="newClub()">Create new club</button>
+</div>
+
+<table *ngIf="clubs?.length>0">
+    <caption>List of club</caption>
+    <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Street</th>
+        <th>City</th>
+        <th>State</th>
+    </tr>
+    <tr *ngFor="let club of clubs" (click)="setClickedRow(club)" (mouseover)="changeMarker(club)" class="clubHover">
+        <td><img src="{{club.image}}" width="42" height="42"></td>
+        <td>{{club.name}}</td>
+        <td>{{club.address}}</td>
+        <td>{{club.street}}</td>
+        <td>{{club.city}}</td>
+        <td>{{club.state}}</td>
+        <td>
+            <button *ngIf="!isOwner(club)" (click)="insertUserToClub(club._id)">Join</button>
+            <button *ngIf="isOwner(club)" (click)="removeUserFromClub(club._id)">Leave</button>
+        </td>
+    </tr>
+</table>
+
+<!--<ol *ngIf="clubs?.length>0">
+    <li *ngFor="let club of clubs">
+        <ul>
+            <li>Club's name: {{club.name}}</li>
+            <li>City: {{club.city}}</li>
+            <li>State: {{club.state}}</li>
+        </ul>
+    </li>
+</ol>-->
+<!--<div *ngIf="clubs?.length>0">
+    <div *ngFor="let club of clubs">
+        Club's name: {{club.name}}<br> City: {{club.name}}<br> State: {{club.state}}<br>
+    </div>
+</div>-->

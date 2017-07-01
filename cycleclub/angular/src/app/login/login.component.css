@@ -1,0 +1,31 @@
+.loginForm {
+    text-align: center;
+    width: 100%;
+}
+
+.loginBtn {
+    border: none;
+    background: #fff;
+    cursor: pointer;
+}
+
+img.loginImage {
+    width: 250px;
+    height: 45px;
+}
+
+img.loginLogoImage {
+    width: 40%;
+    height: 40%;
+}
+
+
+/*.loginForm a {
+    background: url(loginfacebook.png) no-repeat center;
+    background-size: 250px 45px;
+    cursor: pointer;
+    width: 525px;
+    height: 96px;
+    border: none;
+    border-radius: 5px;
+}*/

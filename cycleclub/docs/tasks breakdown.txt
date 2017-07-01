@@ -1,0 +1,83 @@
+
+App Tech Tasks:
+A. Database Design - J
+B. Google Map API - A
+C. Project Structure integration (MEAN Application) and UI(bootstrap) (node and angular separate server) - J
+D. Chat System - N
+E. Token Authentication and JWT (needs sign up and backup support) - A
+F. Git Management - J
+
+Use Cases:
+
+1. Login/Logout (login using facebook) - A
+
+2. Member Page(page displayed after login)
+
+	2.1 Show Clubs Near me (get current location coordinates) - A
+		- how to determine the nearest club? Is it by city (1 city = 1 club)? 
+	2.2 Create New Club (save the coordinates) - A
+		- save the coordinates if necessary or just save the city depends on the answer in 2.2.
+	2.3 Events Tab (display all events from clubs they subscribed to) - A
+		2.3.1 button to join event
+		2.3.2 link to go to the Event details(go to item 4)
+	2.4 Live Rides Link (just the display the nearby events that has already started. go to item 5)
+	
+	
+	
+
+3. Club Page - N
+	3.1 post announcement (upload/display pictures).
+	3.2 add Events.
+	3.3 members.
+		3.3.1 member profile
+
+4. Event details Page - J
+	4.1 Start button enables to trip mode (enabled only for event owner)
+		4.1.1 track the live location in Map
+		4.1.2 emergency toggle (enabled only for event owner)
+			4.1.2.1 when emergency is enabled notify all members and show red box on club page.
+			4.1.2.2 when emergency is disabled/resolve owner can resume the trip.
+	4.2 join button (disabled for event owner)
+	4.3 End button
+
+	
+5. Live Rides Page (display all the nearby events)
+	5.1 join button
+	
+	
+
+Andy:
+B. Google Map API
+E. Token Authentication and JWT (needs sign up and backup support) - A
+1. Login/Logout (login using facebook)
+	2.1 Show Clubs Near me (get current location coordinates)
+		- how to determine the nearest club? Is it by city (1 city = 1 club)? 
+		lon and lat should be unique.
+	2.2 Create New Club (save the coordinates)
+		- save the coordinates if necessary or just save the city depends on the answer in 2.2.
+	2.3 Events Tab (display all events from clubs they subscribed to)
+		2.3.1 button to join event
+		2.3.2 link to go to the Event details(go to item 4)
+
+
+Niva:
+3. Club Page - N
+	3.1 post announcement (upload/display pictures).
+	3.2 add Events.
+	3.3 members.
+		3.3.1 member profile
+D. Chat System
+
+James:
+A. Database Design 
+C. Project Structure integration (MEAN Application) and UI(bootstrap) (node and angular separate server)
+4. Event details Page - J
+4.1 Start button enables to trip mode (enabled only for event owner)
+	4.1.1 track the live location in Map
+	4.1.2 emergency toggle (enabled only for event owner)
+		4.1.2.1 when emergency is enabled notify all members and show red box on club page.
+		4.1.2.2 when emergency is disabled/resolve owner can resume the trip.
+4.2 join button (disabled for event owner)
+4.3 End button
+F. Git Management - J
+	

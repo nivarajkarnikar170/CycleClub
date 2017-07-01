@@ -1,0 +1,13 @@
+.chat-box{
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.title{
+    size: 20px;
+    font-weight: bold;
+}
+
+.club-title{
+    font-weight: bold;
+}
